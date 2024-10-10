@@ -179,6 +179,50 @@
                     font-size: 12px;
                 }
             }
+
+            //中间区域开始
+            #ceter{
+                margin: 5px 0 15px;
+                //左侧放大镜开始
+                #left{
+                    width: 400px;
+                    float: left;
+                    #lefTop{
+                        width: 400px;
+                        position: relative;
+                        #smallPic{
+                            width: 400px;
+                            height: 400px;
+                            border:1px solid #dfdfdf;
+                            position: relative;
+                            img{}
+                            .mask{
+                                width: 200px;
+                                height: 200px;
+                                background: rgba(255, 255, 255, .5);
+                                border: 1px solid #ddd;
+                                position: absolute;
+                                left: 0px;
+                                top: 0px;
+                            }
+                        }
+                    }
+                    #bigPic{
+                        width: 400px;
+                        height: 400px;
+                        border: 1px solid #ddd;
+                        left: 420px;
+                        top: 0px;
+                        position: absolute;
+                        overflow: hidden;
+                        //大图片
+                        img{
+                            width: 800px;
+                            height: 800px;
+                        }
+                    }
+                }
+            }
         }
     }
 }
