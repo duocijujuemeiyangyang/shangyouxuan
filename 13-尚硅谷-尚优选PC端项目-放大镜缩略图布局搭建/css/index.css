@@ -192,6 +192,7 @@
   border: 1px solid #ccc;
   background-color: #ebebeb;
   line-height: 54px;
+  text-align: center;
 }
 #wrapper #content .contentMain #center #left #leftBottom a:first-child {
   margin-right: 4px;

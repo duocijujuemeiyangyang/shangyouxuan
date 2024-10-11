@@ -111,7 +111,6 @@ window.onload = function () {
                 //大图片元素移动的距离 = 大图片宽度 – 大图框元素的宽度
                 var scale=(smallPic.clientWidth-mask.offsetWidth)/(img.offsetWidth-bigPic.clientWidth);
 
-                console.log(img)
                 img.style.left = -left / scale + "px";
                 img.style.top = -top / scale + "px";
 
