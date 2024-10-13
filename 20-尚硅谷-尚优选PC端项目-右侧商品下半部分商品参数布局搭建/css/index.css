@@ -4,45 +4,40 @@
 }
 #wrapper #header .headTop .headTopMain {
   width: 1200px;
-  margin: 0 auto;
+  height: 30px;
   line-height: 30px;
-}
-#wrapper #header .headTop .headTopMain::after {
-  clear: both;
-  display: block;
-  content: '';
+  margin: 0 auto;
 }
 #wrapper #header .headTop .headTopMain .left {
   float: left;
 }
 #wrapper #header .headTop .headTopMain .left h5 {
   float: left;
-  margin-right: 5px;
 }
 #wrapper #header .headTop .headTopMain .left p {
   float: left;
 }
 #wrapper #header .headTop .headTopMain .left p a:first-child {
-  border-right: 1px solid #beaeae;
-  margin-right: 0px;
+  margin-left: 5px;
+  border-right: 1px solid #b3aeae;
   padding-right: 5px;
 }
 #wrapper #header .headTop .headTopMain .right {
   float: right;
 }
 #wrapper #header .headTop .headTopMain .right nav {
-  font-size: 0;
+  font-size: 0px;
 }
 #wrapper #header .headTop .headTopMain .right nav a {
   font-size: 12px;
   margin-right: 10px;
   padding-right: 10px;
-  border-right: 1px solid #beaeae;
+  border-right: 1px solid #b3aeae;
 }
 #wrapper #header .headTop .headTopMain .right nav a:last-child {
-  border: none;
   margin-right: 0px;
   padding-right: 0px;
+  border-right: none;
 }
 #wrapper #header .headBottom .headBottomMain {
   width: 1200px;
@@ -56,73 +51,63 @@
 #wrapper #header .headBottom .headBottomMain .logo {
   float: left;
 }
-#wrapper #header .headBottom .headBottomMain .logo a img {
+#wrapper #header .headBottom .headBottomMain .logo img {
   width: 175px;
   height: 56px;
-  padding: 25px 45px;
+  margin: 25px 45px;
 }
 #wrapper #header .headBottom .headBottomMain .search {
   float: right;
-  padding-top: 35px;
+  margin-top: 35px;
 }
 #wrapper #header .headBottom .headBottomMain .search input {
-  /*在 LESS 中，& 符号代表父选择器的引用。它用于嵌套选择器时，表示当前上下文中的选择器*/
-  /*在 CSS 中，&::-webkit-input-placeholder 是用于选择输入框（<input> 或 <textarea>）的占位符文本的伪元素。这里的 & 代表父选择器，通常用于 LESS 或 SASS 中的嵌套规则。
-                            具体解释如下：
-                            &：引用当前上下文的选择器，例如 .input-class。
-                            ::：表示伪元素。
-                            -webkit-input-placeholder：是针对 WebKit 浏览器（如 Chrome 和 Safari）特有的占位符样式。
-                            .input-class::-webkit-input-placeholder {
-                                                                        color: #999;
-                                                                        font-style: italic;
-                                                                    }*/
-}
-#wrapper #header .headBottom .headBottomMain .search input:first-child {
+  float: left;
   box-sizing: border-box;
   width: 490px;
   height: 32px;
   padding: 0px 4px;
   border: 3px solid #ea4a36;
-  float: left;
+  color: blue;
 }
 #wrapper #header .headBottom .headBottomMain .search input:last-child {
   width: 68px;
   height: 32px;
-  color: #fff;
   background: #ea4a36;
+  color: #fff;
   border: none;
 }
 #wrapper #header .headBottom .headBottomMain .search input::-webkit-input-placeholder {
   color: yellowgreen;
 }
-#wrapper .navWrap {
-  border-bottom: 2px solid #e1241b;
+#wrapper #navWrap {
+  border-bottom: 2px solid #e1251b;
 }
-#wrapper .navWrap .navWrapMain {
+#wrapper #navWrap .navWrapMain {
   width: 1200px;
   margin: 0 auto;
 }
-#wrapper .navWrap .navWrapMain::after {
+#wrapper #navWrap .navWrapMain::after {
   clear: both;
   display: block;
   content: '';
 }
-#wrapper .navWrap .navWrapMain a {
-  display: block;
-  float: left;
+#wrapper #navWrap .navWrapMain a {
   margin: 0 22px;
   font-size: 16px;
   color: #333;
+  float: left;
   line-height: 50px;
 }
-#wrapper .navWrap .navWrapMain a:first-child {
+#wrapper #navWrap .navWrapMain a:first-child {
   width: 210px;
   height: 50px;
   background: #e1251b;
   color: #fff;
   font-size: 14px;
   font-weight: bold;
+  float: left;
   text-align: center;
+  line-height: 50px;
 }
 #wrapper #content .contentMain {
   width: 1200px;
@@ -186,13 +171,13 @@
   margin-top: 5px;
 }
 #wrapper #content .contentMain #center #left #leftBottom a {
-  float: left;
   width: 10px;
   height: 54px;
   border: 1px solid #ccc;
-  background-color: #ebebeb;
-  line-height: 54px;
+  background: #ebebeb;
   text-align: center;
+  line-height: 54px;
+  float: left;
 }
 #wrapper #content .contentMain #center #left #leftBottom a:first-child {
   margin-right: 4px;
@@ -202,14 +187,10 @@
   height: 56px;
   float: left;
   overflow: hidden;
-  position: relative;
 }
 #wrapper #content .contentMain #center #left #leftBottom #piclist ul {
   white-space: nowrap;
   font-size: 0px;
-  position: absolute;
-  left: 0;
-  transition: 0.5s;
 }
 #wrapper #content .contentMain #center #left #leftBottom #piclist ul li {
   width: 50px;
@@ -217,9 +198,6 @@
   border: 1px solid #ccc;
   padding: 2px;
   margin-right: 20px;
-  /*
-                                    像块级元素一样：元素可以设置宽度和高度，并且可以在元素的上下添加边距（margin）和填充（padding）。
-                                    像行内元素一样：元素不会在新的一行开始，而是与其他行内元素在同一行中排列。*/
   display: inline-block;
 }
 #wrapper #content .contentMain #center #left #leftBottom #piclist ul li img {
@@ -228,8 +206,6 @@
 }
 #wrapper #content .contentMain #center #right {
   float: right;
-}
-#wrapper #content .contentMain #center #right .rightTop {
   width: 700px;
 }
 #wrapper #content .contentMain #center #right .rightTop h3 {
@@ -244,10 +220,10 @@
 #wrapper #content .contentMain #center #right .rightTop .priceWrap {
   margin-top: 10px;
   line-height: 28px;
-  background-color: #fee9ec;
+  background: #fee9ec;
   padding: 7px;
 }
-#wrapper #content .contentMain #center #right .rightTop .priceWrap::after {
+#wrapper #content .contentMain #center #right .rightTop .priceWrap .priceTop::after {
   clear: both;
   display: block;
   content: '';
@@ -264,21 +240,17 @@
   float: left;
   font-size: 16px;
 }
-#wrapper #content .contentMain #center #right .rightTop .priceWrap .priceTop .price > p {
+#wrapper #content .contentMain #center #right .rightTop .priceWrap .priceTop .price p {
   float: left;
   font-size: 24px;
   font-weight: bold;
 }
-#wrapper #content .contentMain #center #right .rightTop .priceWrap .priceTop .price > i {
+#wrapper #content .contentMain #center #right .rightTop .priceWrap .priceTop .price i {
   float: left;
   font-size: 12px;
 }
 #wrapper #content .contentMain #center #right .rightTop .priceWrap .priceTop > p {
   float: right;
-}
-#wrapper #content .contentMain #center #right .rightTop .priceWrap .priceBottom {
-  float: left;
-  line-height: 28px;
 }
 #wrapper #content .contentMain #center #right .rightTop .priceWrap .priceBottom::after {
   clear: both;
@@ -289,17 +261,18 @@
   float: left;
   margin-right: 15px;
 }
-#wrapper #content .contentMain #center #right .rightTop .priceWrap .priceBottom > p {
-  width: 520px;
+#wrapper #content .contentMain #center #right .rightTop .priceWrap .priceBottom p {
   float: left;
+  width: 520px;
+  line-height: 28px;
 }
-#wrapper #content .contentMain #center #right .rightTop .priceWrap .priceBottom > p span {
+#wrapper #content .contentMain #center #right .rightTop .priceWrap .priceBottom p span {
   color: #999;
 }
-#wrapper #content .contentMain #center #right .rightTop .priceWrap .priceBottom > p span:first-child {
-  background-color: #c81623;
-  padding: 3px;
+#wrapper #content .contentMain #center #right .rightTop .priceWrap .priceBottom p span:first-child {
+  background: #c81623;
   color: #fff;
+  padding: 3px;
 }
 #wrapper #content .contentMain #center #right .rightTop .support {
   margin-top: 10px;
@@ -311,18 +284,19 @@
   content: '';
 }
 #wrapper #content .contentMain #center #right .rightTop .support > span {
-  margin-right: 15px;
   float: left;
+  margin-right: 15px;
 }
 #wrapper #content .contentMain #center #right .rightTop .support > p {
   float: left;
+  width: 520px;
   color: #999;
 }
 #wrapper #content .contentMain #center #right .rightTop .address {
+  margin-top: 10px;
+  line-height: 28px;
   border-bottom: 1px solid #ededed;
   padding-bottom: 5px;
-  line-height: 28px;
-  margin-top: 10px;
 }
 #wrapper #content .contentMain #center #right .rightTop .address::after {
   clear: both;
@@ -330,10 +304,42 @@
   content: '';
 }
 #wrapper #content .contentMain #center #right .rightTop .address > span {
-  margin-right: 15px;
   float: left;
+  margin-right: 15px;
 }
 #wrapper #content .contentMain #center #right .rightTop .address > p {
   float: left;
+  width: 520px;
   color: #999;
+}
+#wrapper #content .contentMain #center #right .rightBottom {
+  margin-top: 10px;
+  line-height: 28px;
+}
+#wrapper #content .contentMain #center #right .rightBottom .chooseWrap dl {
+  margin-top: 13px;
+  margin-bottom: 13px;
+}
+#wrapper #content .contentMain #center #right .rightBottom .chooseWrap dl::after {
+  clear: both;
+  display: block;
+  content: '';
+}
+#wrapper #content .contentMain #center #right .rightBottom .chooseWrap dl dt {
+  margin-right: 15px;
+  float: left;
+}
+#wrapper #content .contentMain #center #right .rightBottom .chooseWrap dl dd {
+  float: left;
+  margin-right: 5px;
+  color: #666;
+  line-height: 24px;
+  padding: 2px 14px;
+  border-top: 1px solid #eee;
+  border-left: 1px solid #eee;
+  border-right: 1px solid #bbb;
+  border-bottom: 1px solid #bbb;
+}
+#wrapper #content .contentMain #center #right .rightBottom .chooseWrap dl dd:first-of-type {
+  color: red;
 }

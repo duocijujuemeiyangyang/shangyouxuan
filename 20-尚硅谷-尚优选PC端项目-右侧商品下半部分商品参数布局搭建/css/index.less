@@ -3,28 +3,26 @@
 //最外层的包裹元素
 #wrapper {
 
-    //头部
+    //头部开始
     #header {
 
-        //上面部分
+        //头部上半部
         .headTop {
             background: #eaeaea;
             height: 30px;
 
-            //版心元素
+            //头部上半部版心
             .headTopMain {
                 width: 1200px;
-                margin: 0 auto;
+                height: 30px;
                 line-height: 30px;
-                .clearfix();
+                margin: 0 auto;
 
-                //左侧
                 .left {
                     float: left;
 
                     h5 {
                         float: left;
-                        margin-right: 5px;
                     }
 
                     p {
@@ -32,31 +30,31 @@
 
                         a {
                             &:first-child {
-                                border-right: 1px solid #beaeae;
-                                margin-right: 0px;
+                                margin-left: 5px;
+                                border-right: 1px solid #b3aeae;
                                 padding-right: 5px;
                             }
+
                         }
                     }
                 }
 
-                //右侧
                 .right {
                     float: right;
 
                     nav {
-                        font-size: 0;
+                        font-size: 0px;
 
                         a {
                             font-size: 12px;
                             margin-right: 10px;
                             padding-right: 10px;
-                            border-right: 1px solid #beaeae;
+                            border-right: 1px solid #b3aeae;
 
                             &:last-child {
-                                border: none;
                                 margin-right: 0px;
                                 padding-right: 0px;
+                                border-right: none;
                             }
                         }
                     }
@@ -64,8 +62,10 @@
             }
         }
 
-        //下面部分
+        //头部下半部
         .headBottom {
+
+            //头部下半部版心
             .headBottomMain {
                 width: 1200px;
                 margin: 0 auto;
@@ -75,75 +75,64 @@
                 .logo {
                     float: left;
 
-                    a {
-                        img {
-                            width: 175px;
-                            height: 56px;
-                            padding: 25px 45px;
-                        }
+                    img {
+                        width: 175px;
+                        height: 56px;
+                        margin: 25px 45px;
                     }
                 }
 
                 //搜索框
                 .search {
                     float: right;
-                    padding-top: 35px;
+                    margin-top: 35px;
 
                     input {
+                        float: left;
+                        box-sizing: border-box;
+                        width: 490px;
+                        height: 32px;
+                        padding: 0px 4px;
+                        border: 3px solid #ea4a36;
+                        color: blue; //设置输入文本的样式
 
-                        //文本框
-                        &:first-child {
-                            box-sizing: border-box;
-                            width: 490px;
-                            height: 32px;
-                            padding: 0px 4px;
-                            border: 3px solid #ea4a36;
-                            float: left;
-                        }
-
-                        /*在 LESS 中，& 符号代表父选择器的引用。它用于嵌套选择器时，表示当前上下文中的选择器*/
                         &:last-child {
                             width: 68px;
                             height: 32px;
-                            color: #fff;
                             background: #ea4a36;
+                            color: #fff;
                             border: none;
                         }
 
-                        //修饰placeholder
-                        /*在 CSS 中，&::-webkit-input-placeholder 是用于选择输入框（<input> 或 <textarea>）的占位符文本的伪元素。这里的 & 代表父选择器，通常用于 LESS 或 SASS 中的嵌套规则。
-                            具体解释如下：
-                            &：引用当前上下文的选择器，例如 .input-class。
-                            ::：表示伪元素。
-                            -webkit-input-placeholder：是针对 WebKit 浏览器（如 Chrome 和 Safari）特有的占位符样式。
-                            .input-class::-webkit-input-placeholder {
-                                                                        color: #999;
-                                                                        font-style: italic;
-                                                                    }*/
+                        //设置提示文本的样式
                         &::-webkit-input-placeholder {
                             color: yellowgreen;
                         }
+
                     }
                 }
             }
         }
+
     }
 
-    //版心元素
-    .navWrap {
-        border-bottom: 2px solid #e1241b;
+    //头部结束
 
+    //分类导航开始
+    #navWrap {
+        border-bottom: 2px solid #e1251b;
+
+        //版心元素
         .navWrapMain {
             width: 1200px;
             margin: 0 auto;
             .clearfix();
 
             a {
-                display: block;
-                float: left;
                 margin: 0 22px;
                 font-size: 16px;
                 color: #333;
+                float: left;
                 line-height: 50px;
 
                 &:first-child {
@@ -153,21 +142,25 @@
                     color: #fff;
                     font-size: 14px;
                     font-weight: bold;
+                    float: left;
                     text-align: center;
+                    line-height: 50px;
                 }
-
             }
         }
-
     }
+
+    //分类导航结束
 
     //内容区域开始
     #content {
+
+        //版心元素
         .contentMain {
             width: 1200px;
             margin: 15px auto 0 auto;
 
-            //路径导航
+            //路径导航开始
             #navPath {
                 padding: 9px 15px 9px 0;
                 font-size: 0px;
@@ -182,6 +175,8 @@
                 }
             }
 
+            //路径导航结束
+
             //中间区域开始
             #center {
                 margin: 5px 0 15px;
@@ -191,10 +186,12 @@
                     width: 400px;
                     float: left;
 
+                    //上边
                     #leftTop {
                         width: 400px;
                         position: relative;
 
+                        //小图框
                         #smallPic {
                             width: 400px;
                             height: 400px;
@@ -203,6 +200,7 @@
 
                             img {}
 
+                            //蒙版元素
                             .mask {
                                 width: 200px;
                                 height: 200px;
@@ -214,6 +212,7 @@
                             }
                         }
 
+                        //大图框
                         #bigPic {
                             width: 400px;
                             height: 400px;
@@ -240,18 +239,17 @@
                         margin-top: 5px;
 
                         a {
+                            width: 10px;
+                            height: 54px;
+                            border: 1px solid #ccc;
+                            background: #ebebeb;
+                            text-align: center;
+                            line-height: 54px;
                             float: left;
 
                             &:first-child {
                                 margin-right: 4px;
                             }
-
-                            width: 10px;
-                            height: 54px;
-                            border: 1px solid #ccc;
-                            background-color: #ebebeb;
-                            line-height: 54px;
-                            text-align: center;
                         }
 
                         #piclist {
@@ -259,14 +257,10 @@
                             height: 56px;
                             float: left;
                             overflow: hidden;
-                            position: relative;
 
                             ul {
-                                white-space: nowrap; //这个属性设置文本的换行行为。nowrap表示文本不会在行末自动换行
-                                font-size: 0px; //这个属性设置文本的字体大小为0像素。这意味着文本将不可见
-                                position: absolute;
-                                left: 0;
-                                transition: 0.5s;
+                                white-space: nowrap;
+                                font-size: 0px;
 
                                 li {
                                     width: 50px;
@@ -274,9 +268,6 @@
                                     border: 1px solid #ccc;
                                     padding: 2px;
                                     margin-right: 20px;
-                                    /*
-                                    像块级元素一样：元素可以设置宽度和高度，并且可以在元素的上下添加边距（margin）和填充（padding）。
-                                    像行内元素一样：元素不会在新的一行开始，而是与其他行内元素在同一行中排列。*/
                                     display: inline-block;
 
                                     img {
@@ -289,13 +280,14 @@
                     }
                 }
 
-                //右侧
+                //左侧放大镜结束
+
+                //右侧商品详情开始
                 #right {
                     float: right;
-
+                    width: 700px;
+                    //上面
                     .rightTop {
-                        width: 700px;
-
                         h3 {
                             font-size: 14px;
                             line-height: 21px;
@@ -310,11 +302,12 @@
                         .priceWrap {
                             margin-top: 10px;
                             line-height: 28px;
-                            background-color: #fee9ec;
+                            background: #fee9ec;
                             padding: 7px;
-                            .clearfix();
 
                             .priceTop {
+                                .clearfix();
+
                                 >span {
                                     float: left;
                                     margin-right: 15px;
@@ -326,16 +319,16 @@
 
                                     >span {
                                         float: left;
-                                        font-size: 16px
+                                        font-size: 16px;
                                     }
 
-                                    >p {
+                                    p {
                                         float: left;
                                         font-size: 24px;
                                         font-weight: bold;
                                     }
 
-                                    >i {
+                                    i {
                                         float: left;
                                         font-size: 12px;
                                     }
@@ -343,14 +336,10 @@
 
                                 >p {
                                     float: right;
-
-                                    span {}
                                 }
                             }
 
                             .priceBottom {
-                                float: left;
-                                line-height: 28px;
                                 .clearfix();
 
                                 >span {
@@ -358,57 +347,101 @@
                                     margin-right: 15px;
                                 }
 
-                                >p {
-                                    width: 520px;
+                                p {
                                     float: left;
+                                    width: 520px;
+                                    line-height: 28px;
 
                                     span {
                                         color: #999;
-                                        &:first-child{
-                                            background-color: #c81623;
-                                            padding: 3px;
+
+                                        &:first-child {
+                                            background: #c81623;
                                             color: #fff;
+                                            padding: 3px;
                                         }
-                                        
                                     }
                                 }
                             }
                         }
 
-                        .support{
+                        .support {
                             margin-top: 10px;
                             line-height: 28px;
                             .clearfix();
-                            > span{
+
+                            >span {
+                                float: left;
                                 margin-right: 15px;
-                                float: left;
                             }
-                            > p{
+
+                            >p {
                                 float: left;
-                                color:#999;
+                                width: 520px;
+                                color: #999;
                             }
                         }
-                        .address{
+
+                        .address {
+                            margin-top: 10px;
+                            line-height: 28px;
                             border-bottom: 1px solid #ededed;
                             padding-bottom: 5px;
-                            line-height: 28px;
-                            margin-top: 10px;
                             .clearfix();
-                            > span{
+
+                            >span {
+                                float: left;
                                 margin-right: 15px;
-                                float: left;
                             }
-                            > p{
+
+                            >p {
                                 float: left;
-                                color:#999;
+                                width: 520px;
+                                color: #999;
                             }
                         }
-
                     }
 
-                    .rightBottom {}
+                    //下面
+                    .rightBottom{
+                        margin-top: 10px;
+                        line-height: 28px;
+                        //商品参数的选择区域开始
+                        .chooseWrap{
+                            
+                            dl{
+                                margin-top: 13px;
+                                margin-bottom: 13px;
+                                .clearfix();
+                                dt{
+                                    margin-right: 15px;
+                                    float: left;
+                                }
+                                dd{
+                                    float: left;
+                                    margin-right: 5px;
+                                    color:#666;
+                                    line-height: 24px;
+                                    padding:2px 14px;
+                                    border-top: 1px solid #eee;
+                                    border-left: 1px solid #eee;
+                                    border-right: 1px solid #bbb;
+                                    border-bottom: 1px solid #bbb;
+
+                                    &:first-of-type{
+                                        color:red;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
                 }
+
+                //右侧商品详情结束
             }
         }
     }
+
+    //内容区域结束
 }
